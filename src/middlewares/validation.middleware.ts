@@ -14,9 +14,9 @@ export const validarDTO = <T extends object>(dtoClass: ClassConstructor<T>) => {
                     errores: Object.values(err.constraints || {}),
                 })),
             });
-            return; // **Asegura que la ejecución no pase a `next()` después de enviar una respuesta**
+            return; 
         }
 
-        next(); // **Llamamos a `next()` si no hay errores**
+        next(); 
     };
 };
